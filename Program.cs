@@ -14,7 +14,8 @@ namespace Y9_DEC_TO_BIN_SKELETON
             int myInt = 0; //just for testing single stepping
             string myString = "12"; //watch me being cast from string to int
             int myStringAsInt = Convert.ToInt32(myString); //watch me cast from string to int
-
+            string myIntAsString = myInt.ToString();
+            myString = myString + myIntAsString;
             //MAIN:  NUMBER CONVERSION PROGRAM
 
             //CODE GOES HERE

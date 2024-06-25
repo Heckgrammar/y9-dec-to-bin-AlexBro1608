@@ -17,7 +17,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
             string myIntAsString = myInt.ToString();
             myString = myString + myIntAsString;
             //MAIN:  NUMBER CONVERSION PROGRAM
-            Console.WriteLine("Enter your number: ");
+            Console.WriteLine("Enter your number from 0 to 255: ");
             int usernum = Convert.ToInt32(Console.ReadLine());
             string[] BinaryNum = { "0", "0", "0", "0", "0", "0", "0", "0" };
             for (int i = 0; i < BinaryNum.Length; i++)

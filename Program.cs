@@ -17,7 +17,15 @@ namespace Y9_DEC_TO_BIN_SKELETON
             string myIntAsString = myInt.ToString();
             myString = myString + myIntAsString;
             //MAIN:  NUMBER CONVERSION PROGRAM
-
+            Console.WriteLine("Enter your number: ");
+            int usernum = Convert.ToInt32(Console.ReadLine());
+            string[] BinaryNum = { "0", "0", "0", "0", "0", "0", "0", "0" };
+            for (int i = 0; i < BinaryNum.Length; i++)
+            {
+                numberConversion(usernum, 2);
+                BinaryNum[7 - i] = result;
+                usernum = usernum / 2;
+            }
             //CODE GOES HERE
         }
 
@@ -26,7 +34,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
         static string numberConversion(int number, int numberbase)
         {
             //CODE GOES HERE
-
+            string result = Convert.ToString(number % numberbase);
             return result; //REMOVE THE RED LINE!
         }
     }

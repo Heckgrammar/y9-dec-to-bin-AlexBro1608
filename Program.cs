@@ -22,7 +22,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
             string[] BinaryNum = { "0", "0", "0", "0", "0", "0", "0", "0" };
             for (int i = 0; i < BinaryNum.Length; i++)
             {
-                numberConversion(usernum, 2);
+                string result = numberConversion(usernum, 2);
                 BinaryNum[7 - i] = result;
                 usernum = usernum / 2;
             }

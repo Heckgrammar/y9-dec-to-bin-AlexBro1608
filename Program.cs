@@ -26,6 +26,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
                 BinaryNum[7 - i] = result;
                 usernum = usernum / 2;
             }
+            Console.WriteLine(BinaryNum[0] + BinaryNum[1] + BinaryNum[2] + BinaryNum[3] + BinaryNum[4] + BinaryNum[5] + BinaryNum[6] + BinaryNum[7]);
             //CODE GOES HERE
         }
 

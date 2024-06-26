@@ -17,7 +17,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
             //string myIntAsString = myInt.ToString();
             //myString = myString + myIntAsString;
             //MAIN:  NUMBER CONVERSION PROGRAM
-            int usernum = 256;
+            int usernum = 257;
             while (usernum <= -1 || usernum >= 256)
             {
                 Console.WriteLine("Enter your number from 0 to 255: ");
@@ -37,9 +37,8 @@ namespace Y9_DEC_TO_BIN_SKELETON
         //...this function DOES return a value so the method must have a data type
         static string numberConversion(int number, int numberbase)
         {
-            //CODE GOES HERE
             string result = Convert.ToString(number % numberbase);
-            return result; //REMOVE THE RED LINE!
+            return result;
         }
     }
 }

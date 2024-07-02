@@ -17,20 +17,20 @@ namespace Y9_DEC_TO_BIN_SKELETON
             //string myIntAsString = myInt.ToString();
             //myString = myString + myIntAsString;
             //MAIN:  NUMBER CONVERSION PROGRAM
-            int usernum = 257;
-            while (usernum <= -1 || usernum >= 256)
+            int usernum = 65536;
+            while (usernum <= -1 || usernum >= 65536)
             {
-                Console.WriteLine("Enter your number from 0 to 255: ");
+                Console.WriteLine("Enter your number from 0 to 65535: ");
                 usernum = Convert.ToInt32(Console.ReadLine());
             }
-            string[] BinaryNum = { "0", "0", "0", "0", "0", "0", "0", "0" };
+            string[] BinaryNum = { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
             for (int i = 0; i < BinaryNum.Length; i++)
             {
                 string result = numberConversion(usernum, 2);
-                BinaryNum[7 - i] = result;
+                BinaryNum[15 - i] = result;
                 usernum = usernum / 2;
             }
-            Console.WriteLine(BinaryNum[0] + BinaryNum[1] + BinaryNum[2] + BinaryNum[3] + BinaryNum[4] + BinaryNum[5] + BinaryNum[6] + BinaryNum[7]);
+            Console.WriteLine(BinaryNum[0] + BinaryNum[1] + BinaryNum[2] + BinaryNum[3] + BinaryNum[4] + BinaryNum[5] + BinaryNum[6] + BinaryNum[7] + BinaryNum[8] + BinaryNum[9] + BinaryNum[10] + BinaryNum[11] + BinaryNum[12] + BinaryNum[13] + BinaryNum[14] + BinaryNum[15]);
         }
 
         //static void means the function will not return a value so it does not need a data type 

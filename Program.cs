@@ -17,39 +17,46 @@ namespace Y9_DEC_TO_BIN_SKELETON
             //string myIntAsString = myInt.ToString();
             //myString = myString + myIntAsString;
             //MAIN:  NUMBER CONVERSION PROGRAM
-            int usernum = 65536;
-            while (usernum <= -1 || usernum >= 65536)
+            Console.WriteLine("To convert from denary click 1,");
+            Console.WriteLine("To convert from binary click 2,");
+            Console.WriteLine("To convert from hexadecimal click 3: ");
+            string fromBase = Console.ReadLine();
+            if (fromBase == "1")
             {
-                Console.WriteLine("Enter your number from 0 to 65535: ");
-                usernum = Convert.ToInt32(Console.ReadLine());
-            }
-            int userbase = 0;
-            while (userbase <= 0 || userbase >= 17)
-            {
-                Console.WriteLine("Enter a number base between 1 and 16 that you want it converted into: ");
-                userbase = Convert.ToInt32(Console.ReadLine());
-            }
-            if (userbase >= 1 & userbase <= 10)
-            {
-                string[] BinaryNum = { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
-                for (int i = 0; i < BinaryNum.Length; i++)
+                int usernum = 65536;
+                while (usernum <= -1 || usernum >= 65536)
                 {
-                    string result = numberConversion(usernum, userbase);
-                    BinaryNum[15 - i] = result;
-                    usernum = usernum / userbase;
+                    Console.WriteLine("Enter your number from 0 to 65535: ");
+                    usernum = Convert.ToInt32(Console.ReadLine());
                 }
-                Console.WriteLine(BinaryNum[0] + BinaryNum[1] + BinaryNum[2] + BinaryNum[3] + BinaryNum[4] + BinaryNum[5] + BinaryNum[6] + BinaryNum[7] + BinaryNum[8] + BinaryNum[9] + BinaryNum[10] + BinaryNum[11] + BinaryNum[12] + BinaryNum[13] + BinaryNum[14] + BinaryNum[15]);
-            }
-            else if (userbase >= 11 & userbase <= 16)
-            {
-                string[] BinaryNum = { "0", "0", "0", "0"};
-                for (int i = 0; i < BinaryNum.Length; i++)
+                int userbase = 0;
+                while (userbase <= 0 || userbase >= 17)
                 {
-                    string result = ToBase16Conversion(usernum, userbase);
-                    BinaryNum[3 - i] = result;
-                    usernum = usernum / userbase;
+                    Console.WriteLine("Enter a number base between 1 and 16 that you want it converted into: ");
+                    userbase = Convert.ToInt32(Console.ReadLine());
                 }
-                Console.WriteLine(BinaryNum[0] + BinaryNum[1] + BinaryNum[2] + BinaryNum[3]);
+                if (userbase >= 1 & userbase <= 10)
+                {
+                    string[] BinaryNum = { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
+                    for (int i = 0; i < BinaryNum.Length; i++)
+                    {
+                        string result = numberConversion(usernum, userbase);
+                        BinaryNum[15 - i] = result;
+                        usernum = usernum / userbase;
+                    }
+                    Console.WriteLine(BinaryNum[0] + BinaryNum[1] + BinaryNum[2] + BinaryNum[3] + BinaryNum[4] + BinaryNum[5] + BinaryNum[6] + BinaryNum[7] + BinaryNum[8] + BinaryNum[9] + BinaryNum[10] + BinaryNum[11] + BinaryNum[12] + BinaryNum[13] + BinaryNum[14] + BinaryNum[15]);
+                }
+                else if (userbase >= 11 & userbase <= 16)
+                {
+                    string[] BinaryNum = { "0", "0", "0", "0" };
+                    for (int i = 0; i < BinaryNum.Length; i++)
+                    {
+                        string result = ToBase16Conversion(usernum, userbase);
+                        BinaryNum[3 - i] = result;
+                        usernum = usernum / userbase;
+                    }
+                    Console.WriteLine(BinaryNum[0] + BinaryNum[1] + BinaryNum[2] + BinaryNum[3]);
+                }
             }
         }
 

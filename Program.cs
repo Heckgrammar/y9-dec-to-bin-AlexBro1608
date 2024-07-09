@@ -57,6 +57,21 @@ namespace Y9_DEC_TO_BIN_SKELETON
                     }
                     Console.WriteLine(BinaryNum[0] + BinaryNum[1] + BinaryNum[2] + BinaryNum[3]);
                 }
+                else if (fromBase == "2")
+                {
+                    int DenNum = 0;
+                    Console.WriteLine("Type number up to 1111111111111111: ");
+                    string Binary = Console.ReadLine();
+                    int[] binaryNumberline = { 32768, 16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1 };
+                    for (int i = 0; i < binaryNumberline.Length; i++)
+                    {
+                        if (Binary.Substring(i) == "1")
+                        {
+                            DenNum = DenNum +binaryNumberline[i];
+                        }
+                    }
+                    Console.WriteLine(DenNum);
+                }
             }
         }
 

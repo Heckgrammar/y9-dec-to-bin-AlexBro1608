@@ -19,7 +19,6 @@ namespace Y9_DEC_TO_BIN_SKELETON
             //MAIN:  NUMBER CONVERSION PROGRAM
             Console.WriteLine("To convert from denary click 1,");
             Console.WriteLine("To convert from binary click 2,");
-            Console.WriteLine("To convert from hexadecimal click 3: ");
             string fromBase = Console.ReadLine();
             if (fromBase == "1")
             {
@@ -63,10 +62,10 @@ namespace Y9_DEC_TO_BIN_SKELETON
                 int DenNum = 0;
                 Console.WriteLine("Type number up to 1111111111111111: ");
                 string Binary = Console.ReadLine();
-                int[] binaryNumberline = { 32768, 16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1 };
-                for (int i = 0; i < 16; i++)
+                int[] binaryNumberline = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768 };
+                for (int i = 0; i < Binary.Length; i++)
                 {
-                    if (Binary.Substring(i) == "1")
+                    if (Convert.ToString(Binary[i]) == "1")
                     {
                         DenNum = DenNum + binaryNumberline[i];
                     }

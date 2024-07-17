@@ -65,7 +65,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
                 int[] binaryNumberline = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768 };
                 for (int i = 0; i < Binary.Length; i++)
                 {
-                    if (Convert.ToString(Binary[i]) == "1")
+                    if (Convert.ToString(Binary[Binary.Length-1 - i]) == "1")
                     {
                         DenNum = DenNum + binaryNumberline[i];
                     }
